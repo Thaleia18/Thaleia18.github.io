@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -45,6 +46,9 @@
           <a class="nav-link js-scroll-trigger" href="#about">About</a>
         </li>
 		<li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+        </li>
+		<li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
         </li>
 	    <li class="nav-item">
@@ -53,9 +57,6 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#education">Education</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-        </li>
 		<li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#publications">Publications</a>
         </li>
@@ -63,8 +64,9 @@
           <a class="nav-link js-scroll-trigger" href="#interests">Interests & Voluntary Work</a>
         </li>
 	    <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="https://www.linkedin.com/in/thalia-rodriguezgarcia/">Contact me</a>
-        </li>
+          <a class="nav-link js-scroll-trigger" href="#" onclick="openContact(); return false;">Contact me</a>
+
+		</li>
       </ul>
     </div>
   </nav>
@@ -76,99 +78,342 @@
       <div class="w-100">
         <h2 class="mb-0">Thalia
           <span class="text-primary">Rodriguez</span> 
-        </h2><br>
+        </h2>
+		<br>
         <div class="text-1 mb-1 text-center"> <font size="+2">
 		Expert in architecting data-driven solutions, with a strong foundation in analytics, big data management,
 		and the application of AI and Machine Learning technologies.</font>
-        </div></br> 
+        </div> 
 		<div class="text-primary text-center"><font size="+2"><strong style="color: #e59400">
 		Committed to enhancing data quality and integrity, driving business insights, 
-		and fostering innovation for impactful outcomes.</font></div>
+		and fostering innovation for impactful outcomes.</strong></font></div>
+		<div style="width: 90%; margin: 20px auto; min-height: 700px;">
+		  <iframe src="skillsradar.html" 
+			frameborder="0"
+			style="width: 90%; height: 700px; border: none; display: block;">
+		  </iframe>
 		</div>
+	  </div>
 	</section>
+	
+	<section class="resume-section pt-0 p-lg-5 d-flex align-items-center" id="projects">
+	<div class="w-100" > 
+		  <h2 class="mb-0" id="projects">Projects</h2><br>
+			<p class=" lead mb-3" style="text-transform:initial">
+			I am interested in using technology to improve people's lives, enhance business and create impact.<br>
+			Over the past few years, I have focused on healthcare. However, I am curious about other topics as well. For example, in business school, 
+			my favorite classes were Marketing and Finance. I enjoy reading about these subjects 
+			and thinking about projects.</p> 
+
+			<table class="table" style="width:90%;">
+			<col width="50%" >
+			<col width="50%" >
+			<tr>
+				<td > 
+					<strong style="color: #e59400">Mini iCare</strong>
+					<br><br>
+					A modular Python tool that automatically crawls university websites to extract and organize undergraduate admissions information into a searchable database with an interactive dashboard.
+					No technical expertise required to explore the data.
+					<br>
+					Features<br>
+					- Intelligent Web Crawler: Navigates from university homepages to undergraduate admissions pages and relevant subpages using heuristic rules
+					<br>- Comprehensive Data Extraction: Captures application deadlines, course lists, requirements, and scholarship information
+					<br>- SQLite Database: Structured storage with relational tables for universities, courses, and deadlines
+					<br>- Interactive Dashboard: Streamlit-based interface for filtering, sorting, and exploring data without writing SQL
+					<br>- URL Validation: Checks if universities are already in the database before scraping
+					<br><br>Architecture
+					<br>University URL → UniversityScraper → Extract Data → SQLite Database → Streamlit Dashboard
+					<br>
+					<a style="color: #2200C1" href="https://github.com/Thaleia18/mini_icare_TR">For more info click here.</a>
+				</td>
+				<td class="text-primary"><div align="right"><span style="color: #2200C1">August 2025</span></div><br>
+					<center><center><img class="img-fluid" src="img/portfolio/miniicare.png" alt="" style="width:90%"></center> 
+				</center>
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td > 
+					<br><br>
+					<center><img class="img-fluid" src="img/portfolio/hotels.jpg" alt="" style="width:70%"></center> 
+				</td>
+				<td class="text-primary"><div align="right"><span style="color: #2200C1">July 2024</span></div></br>
+					<strong style="color: #e59400">Predicting Hotel Booking Conversion Rates in Real Zero-Inflated Data: A Dual-Model Approach</strong>
+					<br><br>
+					Trivago is a meta-search website that enables advertisers to promote accommodations and allows users to 
+					compare different prices for the same accommodation. By aggregating offers from various booking sites, 
+					Trivago provides users with a comprehensive view of available options, helping them to make informed 
+					decisions and find the best deals. <br>
+					The task given was to create a model to predict conversion rates for hotel bookings across various 
+					advertising sites. This involved using the provided anonymized real data to make predictions for each 
+					advertiser-hotel combination for the specific date of August 11. The challenge was further compounded 
+					by the sparsity of data and the presence of zero-inflated data, as many advertiser-hotel combinations 
+					had no bookings at all.
+					<br><a style="color: #2200C1" href="projects/predicting_hotel_C2B.html">For more info click here.</a><br>
+				</td>
+			</tr>
+			<tr>
+				<td > 
+					<strong style="color: #e59400">ThaliaGPT</strong><br>
+					<br>ThaliaGPT is a Streamlit-based app that streamlines interactions between Thalia Rodriguez and recruiters using 
+					OpenAI's advanced Large Language Models (LLMs) and personalized data. It offers an engaging chat experience, 
+					allowing users to ask questions about Thalia and receive accurate responses. Users can choose their contact method 
+					(Email or LinkedIn) and log their details. The app, deployed on an AWS EC2 instance, ensures scalable, reliable
+					performance. This project demonstrates AI-driven chatbot capabilities and serves as a practical networking tool
+					enhanced  by personalized data ingestion.
+					<a style="color: #2200C1" href="img/portfolio/ThaliaGPT.pdf">For more info click here.</a>
+				</td>
+				<td class="text-primary"><div align="right"><span style="color: #2200C1">June 2024</span></div><br>
+					<center><video width="320" height="240" controls>
+					<source src="img/portfolio/thaliagpt-video_compressed.mp4" type="video/mp4"></video></center>
+					<br>
+				</td>
+			</tr>
+			<tr>
+				<td><strong class="text-primary">Older projects:</strong></td>
+				<td><br></td>
+			</tr>
+			<tr>
+				<td > 
+				<center><img class="img-fluid" src="img/portfolio/c23b.png" alt="" style="width:70%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">How seasonal light and temperature affects sleep
+					</strong><br>
+					In people living with dementia:<br>
+					• Measures of sleep and physiology varied with season.<br>
+					• The indoor light and temperature environment affected multiple aspects of sleep physiology,
+					sleep timing, continuityand duration independent of season.<br>
+					Tuning indoor light and temperature maybe a pragmatic way to improve sleep in those living with dementia.
+
+					<br><a style="color: #2200C1" href="img/portfolio/connectome_2023.pdf">For more info click here.</a>
+				</td>
+			</tr>		
+			<tr>
+				<td > <br><br>
+				<center><img class="img-fluid" src="img/portfolio/c22b.png" alt="" style="width:70%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					Identifying drivers of sleep and circadian phenotypes
+					</strong> <br>
+					Within individuals, understanding the relative contributions of different driving factors will facilitate the design of effective, personalised interventions.
+					<br><a style="color: #2200C1" href="img/portfolio/connectome_2022.pdf">For more info click here.</a>
+				</td>
+			</tr>	
+			<tr>
+				<td > <br><br>
+				<center>
+				<video width="320" height="240" controls>
+					<source src="img/portfolio/test.mp4" type="video/mp4"></video></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					SmartGram App</strong><br>
+					In the last years, influencer marketing has become a strategy for brands. Brands partner with 
+					prominent social media influencers to create sponsored content that resonates with a brand’s 
+					target audience. But brands are only interested in working with influences who have active and 
+					responsive audiences: the higher your engagement metrics, the better chances of getting a business
+					to sponsor you.<br>
+					For Instagram, the main engagement metrics are likes and comments; 
+					they show how interested are the followers in the influencer content.
+					So I thought it would be good to have a tool that predicts these metrics based on the 
+					Instagram post content.<br>
+					My goal is to use a regression model to predict and understand how Instagram data in 
+					a post affect likes and comments. The data includes followers, following, media count
+					(number of posts in the feed), caption, kind of the picture (selfie, outdoor, body snap, 
+					editorial image), content on the photo (smiles, faces, products, logos).<br>
+					<br><a style="color: #2200C1" href="projects/regression.html">For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+				<td > 
+				<center><img class="img-fluid" src="img/portfolio/cmp1.png" alt="" style="width:50%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">Will a customer start a dispute regarding financial services?
+					<br></strong>
+					I'm using real data extracted from: Consumer Financial Protection Financial Bureau.This Bureau defines itself as: "Every complaint provides insight into problems that people are experiencing, helping us identify inappropriate practices and allowing us to stop them before they become major issues." https://www.consumerfinance.gov/data-research/consumer-complaints/
+					This Bureau, each week receives thousands of consumers complaints about financial products and services, and send them to companies for response. Those complaints are published after the company responds or after 15 days, whichever comes first.
+					I will use the information of the complaints that ended in a dispute for my model. 
+					<br><a style="color: #2200C1" href="projects/withnlp.html">For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+				<td > 
+				<center><img class="img-fluid" src="img/portfolio/ig2.png" alt="" style="width:60%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					How hashtags and captions change the perception and position of your brand on Instagram??</strong>
+					<br>
+					Hashtags are tags linked through different platforms. A proper hashtag is a visual component 
+					of an ad that can be used across different social networks to promote continuity of a campaign.
+					Â  Brands usually care about hashtags because these can reinforce a brand's position and promote
+					customers' familiarity with it, which has an impact in the early stages of the buying cycle. 
+					But, can the use of hashtags (or captions) create an incorrect image of your brand? 
+					Let's say that you have a clothing brand in the category of designer, could the use of 
+					hashtags allude to another category of clothing?
+					<br><a style="color: #2200C1" href="projects/project1.html">For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+				<td > 
+				<center><img class="img-fluid" src="img/portfolio/ig1.png" alt="" style="width:70%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					A-guide-to-creating-attractive-and-interactive-data-visualizations...-even-for-NLP
+					</strong>
+					<br>
+					Currently, in my work as a physics professor, I showed some visualizations of EM waves in class. I explained how the parameters in the solution of the equation modify the wave shape, my students got interested and asked me to change the settings and run the code to see different waves. I thought that it would be great if I could modify the graph interactively without running the code. After some Google search, I found some libraries that do pretty cool interactive plots:
+					<br>
+					- Altair<br>
+					- Ipywidgets<br>
+					<br>
+					In this post, you will learn how to:
+					<br>
+					- Use Altair to make a plot where you interact with the mouse to select data points, retrieve information of these points, and zoom in regions of the graph.
+					<br>- Implement ipywidgets to make interactive pie charts, clean text data, and word clouds in one line.<br>
+					<a style="color: #2200C1" href="https://github.com/Thaleia18/A-guide-to-creating-attractive-and-interactive-data-visualizations...-even-for-NLP">
+					For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+				<td > 
+					<center><img class="img-fluid" src="img/portfolio/dispute.jpg" alt="" style="width:40%"></center> 
+				</td>
+				<td class="text-primary">
+						<strong style="color: #e59400"> Predicting disputes regarding financial services.
+						</strong><br>
+						In this project, I intended to predict if a customer will start a dispute after submitting a complaint regarding financial services. I extracted data extracted from Consumer Financial Protection Bureau.
+						<br>
+						The Consumer Financial Protection Bureau is an agency of the United States government in charge of consumer protection in the financial sector. CFPB's jurisdiction consists of banks, credit unions, securities firms, payday lenders, mortgage-servicing operations, foreclosure relief services, debt collectors, and other financial companies operating in the United States. The CFPB’s agency was initially proposed in 2007 by the US Senator Elizabeth Warren, in response to the Late-2000s recession and financial crisis, and approved in the Congress in July 2010.
+						<br><a style="color: #2200C1" href="https://github.com/Thaleia18/Disputes_and_complains_regarding_financial_services">For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+			<td > 
+				<center><img class="img-fluid" src="img/portfolio/fraud.jpg" alt="" style="width:40%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					Predict a fraud using data ofmobile money transactions</strong>
+					<br><a style="color: #2200C1" href="img/portfolio/fraudprediction.pdf">For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+			<td > 
+				<center><img class="img-fluid" src="img/portfolio/nychouse.jpg" alt="" style="width:40%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					Predicting the price of properties sell in NYC: Using Machine Learning algorithms.</strong>
+					<br><a style="color: #2200C1" href="img/portfolio/Poperty price predictions.pdf">
+					For more info click here.</a>
+				</td>
+			</tr>
+			<tr>
+			<td > 
+				<center><img class="img-fluid" src="img/portfolio/income.jpg" alt="" style="width:40%"></center> 
+				</td>
+				<td class="text-primary">
+					<strong style="color: #e59400">
+					Predict whether income exceeds $50K/yr based on census data </strong
+					<br><a style="color: #2200C1" href="img/portfolio/Adult Census Income.pdf">For more info click here.</a>
+				</td>
+			</tr>
+			</table>
+			<!-- Projects Table End -->		
 	</div>
+    </section>
 
 	<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="experience">
 	<div class="w-100" >
 	<h2 class="mb-0">Experience</h2><br>
-	<div class="d-flex flex-column flex-md-row justify-content-between">
-    <table style="width:95%;">
-	    <col width="30%" >
-	    <col width="70%" >
-        <tr>
-            <td > <strong style="color: #e59400">Machine Learning Engineer</strong>
-			</br>UK Dementia Research Institute </br>
-			<span style="color: #2200C1">2021 - 2024</span>
+		<div class="d-flex flex-column flex-md-row justify-content-between">
+		<table style="width:90%;">
+			<col width="30%" >
+			<col width="70%" >
+			<tr>
+				<td > <strong style="color: #e59400">Machine Learning Engineer</strong>
+				<br>UK Dementia Research Institute <br>
+				<span style="color: #2200C1">2021 - 2024</span>
+				</td>
+				<td class="text-primary">
+				<br>• Architected multimodal data pipelines (EMR, NHS, wearables), automating validation and anomaly detection using ML and statistical tests (Python, AWS Lambda), improving data quality by +5% clinical and +30% instrumental.
+				<br>• Designed, and deployed ML models for individual sleep disruption analysis using time-series methods and feature engineering; integrated monitoring for performance, drift, and logging on AWS (SageMaker and CloudWatch).
+				<br>• Developed dashboards (Flask, Streamlit) with real-time data APIs, reducing clinical decision-making time by 15%.
+				<br>• Build reproducible MLOps tools using Docker, Git, and CI/CD, accelerating deployment by 40% .
+				<br>•Authored system and ML documentation for maintainability and team knowledge transfer.
+				</td>
+			</tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr>
+				<td > <strong style="color: #e59400">Data Scientist</strong>
+				<br>IHI <br>
+				<span style="color: #2200C1">2018 - 2020</span>
+				</td>
+				<td class="text-primary">
+				<br>• Automated data ingestion and infrastructure (Wix API, PostgreSQL) reducing manual data entry by 90%.
+				<br>• Boosted website signup conversion rates from 2% to 10% through A/B testing.
+				<br>• Developed a user-friendly Python interface with a SQL backend, reduced query times by 20%.
+				<br>• Analyzed user and business data to define and track key KPIs, building interactive dashboards that translated insights into actionable strategies for executives.
+				</td>
+			</tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr>
+				<td > <strong style="color: #e59400">Physics Lecturer</strong>
+				<br>Indiana University Purdue University Columbus<br>
+				<span style="color: #2200C1">2019 - 2020</span>
+				</td>
+				<td class="text-primary">•	Maintained 100% attendance in classes by engaging students with adaptive teaching methods,
+				receiving an 89% positive evaluation rate.
+				<br>•	Mentored students to improve their grades by an average of 10% across physics, mathematics,
+				and statistics courses through enhanced critical thinking and problem-solving exercises</td>
+			</tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr>
+				<td > <strong style="color: #e59400">Research Assistant</strong>
+				<br>Lab of Computational Biophysics TCU<br>
+				<span style="color: #2200C1">2013 - 2018</span>
+				</td>
+				<td class="text-primary">•	Created mathematical models in Python (scikit-learn, SciPy) to analyze the effect of novel antivirals in respiratory viral infections, tracking benchmark metrics and reducing experimental research costs.
+				<br>•	Applied statistical techniques (MCMC, bootstrapping) and regression methods (linear, ODE parameter estimation) to extract insights and maximize value from limited data.
+				</td>
+			</tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr><td><strong>Case competitions:</strong></td><td><br></td></tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr>
+				<td > <strong style="color: #e59400">IOWA Tippie Business Analytics Competition 2018</strong><br>
+				<span>February 2018</span>
+				</td>
+				<td class="text-primary">• Conducted an in-depth analysis of United Airlines customer surveys big data using R and Python.  Identified through machine learning that the key
+				factors to improve customer experience.<br>
+				   • Delivered visualizations of my findings using Tableau and recommendations to a panel of industry experts.
 			</td>
-            <td class="text-primary">•	Improved clinical data quality by 5% and environmental by 30% by integrating third-party APIs (EMR, NHS, sensors) data and implementing ETL batch workflows for data validation, transformation, and advanced analytics.
-			</br>•	Built a custom production ML system to develop therapies for +100 patients by engineering sleep related features and creating models to identify causes of sleep disruption.
-			</br>•	Authored and updated software documentation and technical reports, covering system architectures, algorithms, analytics insights, and research methodologies.
+			</tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr>
+				<td > <strong style="color: #e59400">TCU Neeley School of Business IBM Case Competition 2017</strong><br>
+				<span>August 2017</span>
+				</td>
+				<td class="text-primary">• Detected areas of opportunity to take advantage of the emergence of AI and presented
+				recommendations to accelerate market share growth.
 			</td>
-        </tr>
-        <tr><td></br></td><td></br></td></tr>
-		<tr>
-            <td > <strong style="color: #e59400">Data Scientist</strong>
-			</br>Consultant </br>
-			<span style="color: #2200C1">2018 - 2020</span>
+			</tr>
+			<tr><td><br></td><td><br></td></tr>
+			<tr>
+				<td > <strong style="color: #e59400">Integrative Project Simulation TCU Neeley School of Business</strong><br>
+				<span>August 2017</span>
+				</td>
+				<td class="text-primary">• Planned and managed a marketing strategy based on data available on the simulation.<br>
+				   • Counseled my team members in the areas of R&D, supply chain and finance.
 			</td>
-			<td class="text-primary">•	Reduced in 90% manual data entry by designing a website and integrating automated data collection systems.
-			</br>•	Boosted client’s website conversion rates from 2% to 10% through targeted A/B testing strategies.
-			</br>•	Optimized data processing by developing a user-friendly Python interface with a SQL backend, enabling betterunderstanding and tracking of key KPIs, while reducing query execution time by 20%.
-			</td>
-        </tr>
-        <tr><td></br></td><td></br></td></tr>
-		<tr>
-            <td > <strong style="color: #e59400">Physics Lecturer</strong>
-			</br>Indiana University Purdue University Columbus</br>
-			<span style="color: #2200C1">2019 - 2020</span>
-			</td>
-			<td class="text-primary">•	Maintained 100% attendance in classes by engaging students with adaptive teaching methods,
-			receiving an 89% positive evaluation rate.
-			</br>•	Mentored students to improve their grades by an average of 10% across physics, mathematics,
-			and statistics courses through enhanced critical thinking and problem-solving exercises</td>
-        </tr>
-		<tr><td></br></td><td></br></td></tr>
-		<tr>
-            <td > <strong style="color: #e59400">Research Assistant</strong>
-			</br>Lab of Computational Biophysics TCU</br>
-			<span style="color: #2200C1">2013 - 2018</span>
-			</td>
-			<td class="text-primary">•	Created mathematical models in Python (scikit-learn, SciPy) to analyze the effect of novel antivirals in respiratory viral infections, tracking benchmark metrics and reducing experimental research costs.
-			</br>•	Applied statistical techniques (MCMC, bootstrapping) and regression methods (linear, ODE parameter estimation) to extract insights and maximize value from limited data.
-			</td>
-        </tr>
-		<tr><td></br></td><td></br></td></tr>
-		<tr><td><strong>Case competitions:</strong></td><td></br></td></tr>
-		<tr><td></br></td><td></br></td></tr>
-		<tr>
-            <td > <strong style="color: #e59400">IOWA Tippie Business Analytics Competition 2018</strong></br>
-			<span>February 2018</span>
-			</td>
-			<td class="text-primary">• Conducted an in-depth analysis of United Airlines customer surveys big data using R and Python.  Identified through machine learning that the key
-			factors to improve customer experience.</br>
-               • Delivered visualizations of my findings using Tableau and recommendations to a panel of industry experts.
-        </td>
-        </tr>
-		<tr><td></br></td><td></br></td></tr>
-		<tr>
-            <td > <strong style="color: #e59400">TCU Neeley School of Business IBM Case Competition 2017</strong></br>
-			<span>August 2017</span>
-			</td>
-			<td class="text-primary">• Detected areas of opportunity to take advantage of the emergence of AI and presented
-			recommendations to accelerate market share growth.
-        </td>
-        </tr>
-		<tr><td></br></td><td></br></td></tr>
-		<tr>
-            <td > <strong style="color: #e59400">Integrative Project Simulation TCU Neeley School of Business</strong></br>
-			<span>August 2017</span>
-			</td>
-			<td class="text-primary">• Planned and managed a marketing strategy based on data available on the simulation.<br>
-               • Counseled my team members in the areas of R&D, supply chain and finance.
-        </td>
-        </tr>
-    </table>
-	</div>		
+			</tr>
+		</table>
+		</div>		
 	</div>
     </section>
 
@@ -180,7 +425,9 @@
 
 	   <table style="width:80%">
 	    <col width="25%" >
-	    <col width="50%" >
+	    <col width="25%" >
+	    <col width="25%" >
+	    <col width="25%" >
 		<tr>
 		<td class="text-center" style="font-family:'Inconsolata',monospace;color: #e59400; font-size:1em;font-weight: bold">
 		Python</td>
@@ -195,8 +442,6 @@
 		<li>ScikitLearn</li>
 		<li>Statsmodels</li></ul>
 		</td>
-		</tr>
-		<tr>
 		<td class="text-center" style="font-family:'Inconsolata',monospace; color: #e59400; font-size:1em;font-weight: bold">Analytics: </td>
 		<td style="font-family:'Inconsolata',monospace; font-size:0.85em;">
 		<ul><li>SAS</li>
@@ -216,20 +461,16 @@
 		<li>Snowflake</li>
 		<li>Airflow</li>
 		<li>Docker</li></ul></td>
-		<td style="font-family:'Inconsolata',monospace">
-		</td>
-		</tr>
-		<tr>
-		<td class="text-center" style="font-family:'Inconsolata',monospace; color: #e59400; font-size:1em;font-weight: bold;">Web Development: </td>
+		<td class="text-center" style="font-family:'Inconsolata',monospace; color: #e59400; font-size:1em;font-weight: bold;">Web <br>Development: </td>
 		<td style="font-family:'Inconsolata',monospace; font-size:0.85em;"> 
-		<ul><li>HTML/CSS/Javascript</li>
+		<ul><li>HTML/CSS/JS</li>
 		<li>Flask</li>
 		<li>Streamlit</li></ul>
 		</td>
 		</tr>
 		</table>
-		</br>
-       <h3 class="m-0">Other skills:</h3>
+		<br>
+       <h3 class="m-0">Other skills:</h3><br>
 		<div style="font-family:'Courier New'"> <span class="fa-stack fa-2x text-center" >
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
@@ -261,7 +502,7 @@
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
     <div class="w-100">
     <h2 class="mb-0">Education</h2>
-		</br>
+		<br>
 	   <table style="width:95%">
 	     <col width="60%" >
          <col width="40%" >
@@ -305,111 +546,8 @@
 		</tr>
 	   </table>
     </div>
-   </section>
-
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-    <div class="w-100" >
-      <h3>Machine Learning </h3>
-		<p class=" lead mb-3" STYLE="text-transform:initial" align="center">
-		I am interested in using Python and technology to improve people's lives, enhance business and create impact.</br>
-		Over the past few years, I have focused on healthcare. </br>
-		However, I am curious about other topics as well. For example, in business school, 
-		my favorite classes were Marketing and Finance. I enjoy reading about these subjects 
-		and thinking about projects.</p> 
-		  
-      	<h5 class="text-primary">Recent projects:</h5>
-		<table style="width:90%;">
-	    <col width="50%" >
-	    <col width="50%" >
-        <tr>
-			<td > <strong style="color: #e59400">Predicting Hotel Booking Conversion Rates in Real Zero-Inflated Data: A Dual-Model Approach</strong>
-				</br></br>
-				<center><img class="img-fluid" src="img/portfolio/hotels.jpg" alt="" style="width:60%"></a></center> 
-				</td>
-				<td class="text-primary"><div align="right"><span style="color: #2200C1">July 2024</span></div></br>
-				Trivago is a meta-search website that enables advertisers to promote accommodations and allows users to 
-				compare different prices for the same accommodation. By aggregating offers from various booking sites, 
-				Trivago provides users with a comprehensive view of available options, helping them to make informed 
-				decisions and find the best deals. </br>
-				The task given was to create a model to predict conversion rates for hotel bookings across various 
-				advertising sites. This involved using the provided anonymized real data to make predictions for each 
-				advertiser-hotel combination for the specific date of August 11. The challenge was further compounded 
-				by the sparsity of data and the presence of zero-inflated data, as many advertiser-hotel combinations 
-				had no bookings at all.
-				</br><a style="color: #2200C1" href="projects/predicting_hotel_C2B.html">For more info click here.</a><br>
-				</td>
-		</tr>
-		<tr><td></br></td><td></br></td></tr>
-		<tr>
-			<td > <h4 style="color: #e59400">ThaliaGPT</h4>
-				</br>
-				<center><video width="160" height="120" controls>
-				<source src="img/portfolio/thaliagpt-video_compressed.mp4" type="video/mp4"></video></center>
-				</td>
-				<td class="text-primary"><div align="right"><span style="color: #2200C1">June 2024</span></div></br>
-				ThaliaGPT is a Streamlit-based app that streamlines interactions between Thalia Rodriguez and recruiters using 
-				OpenAI's advanced Large Language Models (LLMs) and personalized data. It offers an engaging chat experience, 
-				allowing users to ask questions about Thalia and receive accurate responses. Users can choose their contact method 
-				(Email or LinkedIn) and log their details. The app, deployed on an AWS EC2 instance, ensures scalable, reliable
-				performance. This project demonstrates AI-driven chatbot capabilities and serves as a practical networking tool
-				enhanced  by personalized data ingestion.
-				<a style="color: #2200C1" href="img/portfolio/ThaliaGPT.pdf">For more info click here.</a><br>
-			</td>
-		</tr>
-		</table>	
-		</br>
-		<h5 class="text-primary">Other projects:</h5></br>
-			<table>
-			<tr>
-				<td style="background-color:#fcf4e5;text-align:center"><a href="img/portfolio/connectome_2023.pdf"">
-				<img class="img-fluid" src="img/portfolio/c23.png" alt="" style="width:90%"></a>
-				</td>
-				<td style="background-color:#e8e5f8;text-align:center"><a href="img/portfolio/connectome_2022.pdf">
-				<img class="img-fluid" src="img/portfolio/c22.png" alt="" style="width:90%"></a>
-				</td>
-				<td style="background-color:#fcf4e5;text-align:center">SmartGram App:
-				<a href="projects/regression.html"> Models\ </a> <a href="http://18.219.139.45:8501/">App</a><br>
-				<video width="160" height="120" controls>
-				<source src="img/portfolio/test.mp4" type="video/mp4"></video>
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color:#e8e5f8;text-align:center"><a href="projects/withnlp.html">
-				<img class="img-fluid" src="img/portfolio/cmp1.png" alt="" style="width:90%"></a> 
-				</td>
-				<td style="background-color:#fcf4e5;text-align:center"><a href="projects/project1.html">
-				<img class="img-fluid" src="img/portfolio/ig2.png" alt="" style="width:90%"></a>
-				</td>
-				<td style="background-color:#e8e5f8;text-align:center"><a href="https://medium.com/@thalia181189/want-to-create-fully-interactive-plots-with-python-d54ab28760d9" target="_blank">
-				<img class="img-fluid" src="img/portfolio/ig1.png" alt="" style="width:75%"></a><br> 
-				<a href="https://github.com/Thaleia18/A-guide-to-creating-attractive-and-interactive-data-visualizations...-even-for-NLP">Code here</a>  <br />  
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color:#fcf4e5;text-align:center"><a href="img/portfolio/predictingdsiputes.pdf" target="_blank">
-				<img class="img-fluid" src="img/portfolio/dispute.jpg" alt="" style="width:90%"></a><br> 
-				<a href="https://github.com/Thaleia18/Disputes_and_complains_regarding_financial_services">Code</a>
-				</td>
-				<td style="background-color:#e8e5f8;text-align:center"><a href="img/portfolio/fraudprediction.pdf" target="_blank">
-				<img class="img-fluid" src="img/portfolio/fraud.jpg" alt="" style="width:70%"></a><br /> 
-				<a href="https://github.com/Thaleia18/predictig-fraud-using-transactions-data">Code</a>
-				</td>
-				<td style="background-color:#fcf4e5;text-align:center"><a href="img/portfolio/Poperty price predictions.pdf" target="_blank">
-				<img class="img-fluid" src="img/portfolio/nychouse.jpg" alt="" style="width:70%"></a><br /> 
-				<a href="https://github.com/Thaleia18/predicting-cost-of-properties-NYC">Code</a>
-				</td>
-			</tr>
-			<tr>
-				<td style="background-color:#e8e5f8;text-align:center">
-				<a href="img/portfolio/Adult Census Income.pdf" target="_blank">
-				<img class="img-fluid" src="img/portfolio/income.jpg" alt="" style="width:90%"></a><br /> 
-				<a href="https://github.com/Thaleia18/Data-income-classificationproblem">Code</a></td>
-				<td></td>
-			</tr>
-			</table> 
-      </div>
     </section>
+
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="publications">
       <div class="w-100">
@@ -460,7 +598,8 @@
       <div class="w-100">
         <h2 class="mb-0">Interests and Voluntary Work</h2>
         <p class="text-primary"> Apart from coding, I enjoy physical challenges. If I have free time,
-		I like to go to the gym to practice boxing (I do it since highschool). In the weekends, I practice yoga at home.<p>
+		I like to go to the gym to practice boxing (I do it since highschool). 
+		In the weekends, I practice yoga at home.</p>
 		 <p>I enjoy sci-fi movies. And in Netflix, I mostly watch crime and mistery shows. </p>
 		
 		 <p class="text-primary">I can't decide if I'm a cat or dog person, I adore both. </p>
@@ -524,10 +663,40 @@
 		</div>
     </section>
 
+<!-- Contact Popup -->
+	<div id="contactPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+	  <div style="background:white; padding:3rem; border-radius:1rem; max-width:500px; text-align:center; position:relative;">
+		<button onclick="closeContact()" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:2rem; cursor:pointer;">&times;</button>
+		<h3 style="color:#e59400; margin-bottom:2rem;">Let's Connect!</h3>
+		
+		<div style="margin:1.5rem 0;">
+		  <a href="https://www.linkedin.com/in/thalia-rodriguezgarcia/" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem; background:#0077b5; color:white; text-decoration:none; border-radius:0.5rem; font-size:1.1rem;">
+			<i class="fab fa-linkedin" style="font-size:1.5rem;"></i>
+			Connect on LinkedIn
+		  </a>
+		</div>
+		
+		<div style="margin:1.5rem 0;">
+		  <a href="mailto:thalia181189@gmail.com" style="display:flex; align-items:center; justify-content:center; gap:1rem; padding:1rem; background:#e59400; color:white; text-decoration:none; border-radius:0.5rem; font-size:1.1rem;">
+			<i class="fas fa-envelope" style="font-size:1.5rem;"></i>
+			Send Email
+		  </a>
+		</div>
+	  </div>
+	</div>
 
   </div>
 
   <!-- Bootstrap core JavaScript -->
+  <script>
+	function openContact() {
+	  document.getElementById('contactPopup').style.display = 'flex';
+	}
+
+	function closeContact() {
+	  document.getElementById('contactPopup').style.display = 'none';
+	}
+	</script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
