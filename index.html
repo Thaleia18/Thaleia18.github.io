@@ -108,6 +108,41 @@
 			<div class="table-responsive">
 			<table class="table" style="width:100%;">
 			<tr>
+				<td > <div align="right"><span style="color: #2200C1">March 2026</span></div><br>
+					<strong style="color: #e59400">📊 RatioLens</strong>
+					<br><br>
+					An AI-powered financial analysis chatbot that lets you query SEC EDGAR 10-K data, compute accounting ratios, and generate charts — all through a conversational interface.
+					<br><br>
+					 What it does:
+					<br>-	Natural language queries: ask questions like "Compare MSFT vs GOOGL margins" or "Net income of AAPL"
+					<br>-	Loads 10-K financial datafrom a local SQLite database (populated from SEC EDGAR)
+					<br>-	Computes accounting ratios: profit margin, ROE, current ratio, debt-to-equity;
+					<br>-	Generates charts via a Python REPL agent and displays them inline in the chat
+					<br>-	Multi-agent architecture: a supervisor delegates to a data agent and an analytics agent
+					<br>
+					<br>
+					Architecture
+					<br>
+					User → Streamlit UI<br>
+							 └── Supervisor (GPT-4o-mini)<br>
+								   ├── Data Agent  →  load_data_tool  →  SQLite (RL_database.db)<br>
+								   │.......................................└── tenk_concepts<br>
+								   └── Analytics Agent  →  compute_ratios<br>
+									......................→  python_repl_tool  →  plot.png<br>
+					<br>
+					<a style="color: #2200C1" href="https://github.com/Thaleia18/ratiolens_march2026">For more info click here.</a>
+				</td>
+				<td class="text-primary"><br><br>
+					<center><center><img class="img-fluid" src="img/portfolio/ratiolens_image.png" alt="" style="width:100%"></center> 
+					</center><br>
+					<center><center><img class="img-fluid" src="img/portfolio/langgraph_diagram.png" alt="" style="width:50%"></center> 
+					</center>
+					<br>The supervisor uses LangGraph with `InMemorySaver` for conversation memory across a session. Agents are called sequentially (not in parallel).
+					<br>The supervisor filters request to make sure that these are related to the project, not missused of the llms.
+					
+				</td>
+			</tr>
+			<tr>
 				<td > <div align="right"><span style="color: #2200C1">August 2025</span></div><br>
 					<strong style="color: #e59400">Mini iCare</strong>
 					<br><br>
